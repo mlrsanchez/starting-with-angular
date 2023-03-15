@@ -1,0 +1,19 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+h2{
+    color:dimgray;
+    margin-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+body {
+    padding: 0.5em; /* rem vs em */
+}
+
+label {
+    padding: 0.5rem;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <h2>Info Consola {{ consoleDetail.name }}</h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            <span>{{ consoleDetail.name }} </span>
+        </div>
+        <div class="col">
+            <span>{{ consoleDetail.price }}</span>
+        </div>
+        <div class="col">
+            <img class="img-fluid " [src]="consoleDetail.image" alt="game image" width="50%" height="50%" />
+        </div>
+    </div>
+    <div class="row">
+        <h5>Available accesories</h5>
+    </div>
+   
+
+        <div *ngFor="let consoleItem of consoleAccesories" >
+            <div class="row">
+            <app-console-accesories
+                [consoleAccesory]="consoleItem"></app-console-accesories>
+                </div>
+        </div>
+    
+</div>

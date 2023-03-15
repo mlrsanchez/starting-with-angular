@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Create Console</h2>
+    <div class="row">
+        <div class="col-6">
+            <form [formGroup]="newConsoleForm" (ngSubmit)="saveNewConsole(newConsoleForm)">
+
+                <div class="form-group">
+                    <label for="name">Name Console:</label>
+                    <em *ngIf="name.invalid && name.touched">
+                        Required
+                    </em>
+
+                    <input type="text" placeholder="Type Name" formControlName="name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="vendor">Vendor:</label>
+                    <em *ngIf="vendor.invalid && vendor.touched">Required</em>
+                    <input type="text" placeholder="Type Vendor" formControlName="vendor" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <em *ngIf="newConsoleForm.controls?.['price']?.errors?.['pattern']">Price invalid</em>
+
+                    <input type="text" placeholder="Enter price" formControlName="price" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+
+            </form>
+        </div>
+    </div>
+</div>

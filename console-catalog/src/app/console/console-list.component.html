@@ -1,0 +1,23 @@
+<div class="container">
+  
+     <h2>Console List</h2>
+     <div *ngFor ="let console of consoles" 
+           [routerLink]="['/consoles/',console.name ]">
+        <div class="row" >
+            <div class="col">
+              <label>Name: </label>
+              <span >{{ console.name }}</span>
+            </div>
+            <div class="col">
+              <label>Vendor: </label>
+              <span>{{ console.vendor }}</span>
+            </div>    
+            <div class="col">
+                <label>Price: </label>
+                <span>{{ console.price }}</span>
+            </div>    
+
+        </div>
+    </div>
+ 
+</div>
